@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Array Printer</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <li><a href="Calculator.html">Calculator</a></li>
+        <li><a href="Numberchecker.html">Number Checker</a></li>
+        <li><a href="StringChecker.html">String Checker</a></li>
+        <li><a href="ArrayPrinter.html">Array Printer</a></li>
+    </nav>
+
+    <div id="array">
+        <h1>2D Array Printer</h1>
+        <p>Click the button below to display the elements of the 2D array.</p>
+
+        <button id="Check" onclick="clickFun()">Display Array</button>
+        <div  id="output"></div>
+    </div>
+    <script>
+        var a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        function display2DArray(array) 
+        {
+            let result = '';
+            for (let i = 0; i < array.length; i++) 
+            {
+                result += `Row ${i + 1}: `;
+                for (let j = 0; j < array[i].length; j++) 
+                {
+                    result += `${array[i][j]} `;
+                }
+                result += '\n';
+            }
+            return result;
+        }
+
+        function clickFun()
+        {
+        const output = display2DArray(a);
+        document.getElementById('output').innerText = output;
+        };
+    </script>
+</body>
+
+</html>

@@ -60,8 +60,8 @@ nav a:hover {
     font-size: 2rem;
     text-align: right;
     padding: 10px;
-    border-radius: 10px ;
-    
+    border-radius: 10px;
+
 }
 
 .keys {
@@ -167,6 +167,7 @@ p {
 #Check:hover {
     background-color: #ffffff;
 }
+
 #string {
 
     border: 2px solid #ffffff;
@@ -176,19 +177,37 @@ p {
     box-shadow: 0 10px 100px #ffae00;
     background-color: #000000;
 }
+
 #labelling {
     margin-left: 14%;
 }
-#labelling label{
-    
+
+#labelling label {
+
     color: #ffffff;
-    
+
 }
-#labelling input{
+
+#labelling input {
     border: 2px solid #000000;
     border-radius: 6px;
     padding: 15px;
     width: 300px;
     margin-bottom: 4px;
     margin-top: 5px;
+}
+
+#array {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 460px;
+    box-shadow: 0 10px 100px #ffae00;
+    background-color: #000000;
+}
+
+#output {
+    color: #ffffff;
+    margin-left: 30%;
+    margin-top: 10px;
 }
