@@ -87,12 +87,12 @@ nav a:hover {
     color: #000000;
 }
 
-.keys button.operator {
+.keys button.sign {
     background-color: #ffae00;
     color: #ffffff;
 }
 
-.keys button.operator:hover {
+.keys button.sign:hover {
     background-color: #ffffff;
     color: #000000;
 }
@@ -169,13 +169,17 @@ p {
 }
 
 #string {
-
     border: 2px solid #ffffff;
     border-radius: 10px;
     padding: 10px;
     width: 460px;
     box-shadow: 0 10px 100px #ffae00;
     background-color: #000000;
+}
+
+#result {
+    color: greenyellow;
+    margin-top: 10px;
 }
 
 #labelling {
@@ -207,7 +211,7 @@ p {
 }
 
 #output {
-    color: #ffffff;
+    color: greenyellow;
     margin-left: 30%;
     margin-top: 10px;
 }
