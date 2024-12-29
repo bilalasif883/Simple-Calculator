@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <li><a href="Calculator.html">Calculator</a></li>
+        <li><a href="Numberchecker.html">Number Checker</a></li>
+        <li><a href="StringChecker.html">String Checker</a></li>
+    </nav>
+    <div id="numberchecker">
+        <h1 id="heading2">Enter A Number</h1>
+        <p>I'll let you know if its +ve, -ve or zero</p>
+        <input type="text" id="number" placeholder="Enter a number">
+        <br>
+        <button type="button" id="Check" onclick="CheckNumber()">Check</button>
+        <p id="result" style="color: greenyellow;"></p>
+    </div>
+
+
+</body>
+<script >
+    function CheckNumber() {
+    const number = parseFloat(document.getElementById('number').value);
+    const resultElement = document.getElementById('result');
+
+    if (isNaN(number)) {
+        resultElement.textContent = "Please Enter a Number!";
+    } else if (number > 0) {
+        resultElement.textContent = "The number is Positive.";
+    } else if (number < 0) {
+        resultElement.textContent = "The number is Negative.";
+    } else {
+        resultElement.textContent = "The number is Zero.";
+    }
+}
+</script>
+
+</html>

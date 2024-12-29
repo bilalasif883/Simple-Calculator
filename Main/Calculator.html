@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <li><a href="Calculator.html">Calculator</a></li>
+        <li><a href="Numberchecker.html">Number Checker</a></li>
+        <li><a href="StringChecker.html">String Checker</a></li>
+    </nav>
+
+    <div class="calculator">
+        <h1 id="heading">CALCULATOR</h1>
+        <div class="display" id="display">0</div>
+        <div class="keys">
+
+            <button class="equal" onclick="calculate()">=</button>
+
+            <button class="operator" onclick="SelectSign('/')">/</button>
+            <button class="operator" onclick="SelectSign('*')">x</button>
+            <button class="operator" onclick="SelectSign('-')">-</button>
+            <button class="operator" onclick="SelectSign('+')">+</button>
+
+            
+
+            <button onclick="ClickAdd(1)">1</button>
+            <button onclick="ClickAdd(2)">2</button>
+            <button onclick="ClickAdd(3)">3</button>
+
+            <button class="clear" onclick="clearDisplay()">AC</button>
+            
+            <button onclick="ClickAdd(4)">4</button>
+            <button onclick="ClickAdd(5)">5</button>
+            <button onclick="ClickAdd(6)">6</button>
+            <button onclick="ClickAdd(7)">7</button>
+            <button onclick="ClickAdd(8)">8</button>
+            <button onclick="ClickAdd(9)">9</button>
+            <button onclick="ClickAdd(0)">0</button>
+
+            <button onclick="ClickAdd('.')">.</button>
+            
+
+        </div>
+    </div>
+
+
+</body>
+<script src="logic.js"></script>
+
+</html>

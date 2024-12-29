@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <li><a href="Calculator.html">Calculator</a></li>
+        <li><a href="Numberchecker.html">Number Checker</a></li>
+        <li><a href="StringChecker.html">String Checker</a></li>
+    </nav>
+    <div id="string">
+        <h1 id="heading3">String Checker</h1>
+        <p>Enter a string and a character to find how many times the character appears in the string.</p>
+        <div id="labelling">
+            <label for="inputString">String:</label><br>
+            <input type="text" id="inputString" placeholder="Enter your string here">
+            <br>
+            <label for="searchChar">Character:</label><br>
+            <input type="text" id="searchChar" placeholder="Enter the character">
+        </div>
+        <button id="Check" onclick="check()">Check</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function countOccurrences(str, char) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === char) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        function check(){
+            const inputString = document.getElementById("inputString").value;
+            const searchChar = document.getElementById("searchChar").value;
+
+            if (inputString && searchChar && searchChar.length === 1) {
+                const x = countOccurrences(inputString, searchChar);
+                document.getElementById("result").innerText = `Your character appears ${x} times.`;
+            } else {
+                document.getElementById("result").innerText ="Please provide a valid string and a single character.";
+            }
+        };
+    </script>
+</body>
+
+
+</html>
