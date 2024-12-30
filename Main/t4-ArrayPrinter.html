@@ -22,7 +22,7 @@
         <p>Click the button below to display the elements of the 2D array.</p>
 
         <button id="Check" onclick="clickFun()">Display Array</button>
-        <div  id="output"></div>
+        <div id="output"></div>
     </div>
     <script>
         var a = [
@@ -32,14 +32,11 @@
             [7, 4, 28, 14],
             [3, 10, 26, 7]
         ];
-        function display2DArray(array) 
-        {
+        function display2DArray(array) {
             let result = '';
-            for (let i = 0; i < array.length; i++) 
-            {
+            for (let i = 0; i < array.length; i++) {
                 result += `Row ${i + 1}: `;
-                for (let j = 0; j < array[i].length; j++) 
-                {
+                for (let j = 0; j < array[i].length; j++) {
                     result += `${array[i][j]} `;
                 }
                 result += '\n';
@@ -47,10 +44,9 @@
             return result;
         }
 
-        function clickFun()
-        {
-        const output = display2DArray(a);
-        document.getElementById('output').innerText = output;
+        function clickFun() {
+            const output = display2DArray(a);
+            document.getElementById('output').innerText = output;
         };
     </script>
 </body>

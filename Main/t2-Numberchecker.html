@@ -24,6 +24,7 @@
         <br>
         <button type="button" id="Check" onclick="CheckNumber()">Check</button>
         <p id="result" style="color: greenyellow;"></p>
+        <button type="button" id="prompt" onclick="promptuser()">Generate Prompt</button>
     </div>
 
 
@@ -31,18 +32,39 @@
 <script>
     function CheckNumber() {
         const number = parseFloat(document.getElementById('number').value);
-        const resultElement = document.getElementById('result');
+        const result = document.getElementById('result');
 
         if (isNaN(number)) {
-            resultElement.textContent = "Please Enter a Number!";
-        } else if (number > 0) {
-            resultElement.textContent = "The number is Positive.";
-        } else if (number < 0) {
-            resultElement.textContent = "The number is Negative.";
-        } else {
-            resultElement.textContent = "The number is Zero.";
+            result.textContent = "Please Enter a Number!";
+        }
+        else if (number > 0) {
+            result.textContent = "The number is Positive.";
+        }
+        else if (number < 0) {
+            result.textContent = "The number is Negative.";
+        }
+        else {
+            result.textContent = "The number is Zero.";
         }
     }
+
+    function promptuser() {
+        const number = parseFloat(prompt("Enter a Number"));
+
+        if (isNaN(number)) {
+            alert("Please Enter a Number!");
+        }
+        else if (number > 0) {
+            alert("The number is Positive.");
+        }
+        else if (number < 0) {
+            alert("The number is Negative.");
+        }
+        else {
+            alert("The number is Zero.");
+        }
+    }
+
 </script>
 
-</html>
+</htm

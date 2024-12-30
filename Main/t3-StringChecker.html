@@ -28,38 +28,46 @@
             <input type="text" id="searchChar" placeholder="Enter the character">
         </div>
         <button id="Check" onclick="check()">Check</button>
-
         <p id="result"></p>
+        <button type="button" id="prompt" onclick="promptuser()">Generate Prompt</button>
     </div>
 
     <script>
-        function counter(str, char) 
-        {
+        function counter(str, char) {
             let count = 0;
-            for (let i = 0; i < str.length; i++) 
-            {
-                if (str[i] === char) 
-                {
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === char) {
                     count++;
                 }
             }
             return count;
         }
 
-        function check() 
-        {
+        function check() {
             const inputString = document.getElementById("inputString").value;
             const searchChar = document.getElementById("searchChar").value;
 
-            if (inputString && searchChar && searchChar.length === 1) 
-            {
+            if (inputString && searchChar && searchChar.length === 1) {
                 const x = counter(inputString, searchChar);
                 document.getElementById("result").innerText = `Your character appears ${x} times.`;
             }
             else {
-                document.getElementById("result").innerText = "Please Enter String!";
+                document.getElementById("result").innerText = "Incorrect String or Character!";
             }
         };
+
+        function promptuser() {
+            const input = prompt("Enter a String");
+            const search = prompt("Enter a Character");
+
+            if (input && search && search.length === 1) {
+                const x = counter(input, search);
+                alert(`Your character appears ${x} times.`);
+            }
+            else {
+                alert("Incorrect String or Character!");
+            }
+        }
     </script>
 </body>
 

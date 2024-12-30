@@ -4,16 +4,14 @@ let Sign = null;
 
 const display = document.getElementById('display');
 
-function ClickAdd(number) 
-{
+function ClickAdd(number) {
     if (number === '.' && SecondNumber.includes('.'))
         return;
     SecondNumber = SecondNumber.toString() + number.toString();
     updateDisplay();
 }
 
-function SelectSign(op) 
-{
+function SelectSign(op) {
     if (SecondNumber === '')
         return;
     if (FirstNumber !== '')
@@ -23,8 +21,7 @@ function SelectSign(op)
     SecondNumber = '';
 }
 
-function calculate() 
-{
+function calculate() {
     let answer;
     const firstNum = parseFloat(FirstNumber);
     const secondNum = parseFloat(SecondNumber);
@@ -40,7 +37,7 @@ function calculate()
             answer = firstNum * secondNum;
             break;
         case '/':
-            answer = secondNum === 0 ? 'Error' : firstNum / secondNum;
+            answer = secondNum === 0 ? 'Math Error' : firstNum / secondNum;
             break;
         default:
             return;
@@ -51,16 +48,14 @@ function calculate()
     updateDisplay();
 }
 
-function clearDisplay() 
-{
+function clearDisplay() {
     SecondNumber = '';
     FirstNumber = '';
     Sign = null;
     updateDisplay();
 }
 
-function updateDisplay() 
-{
+function updateDisplay() {
     display.innerText = SecondNumber || '0';
 }
 
